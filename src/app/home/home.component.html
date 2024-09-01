@@ -16,54 +16,20 @@
       <a href="#" class="text-green-600"> Show more </a>
     </div>
     <div class="mb-6 flex items-center gap-6">
-      <div
-        class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/2048px-BMW_logo_%28gray%29.svg.png"
-          alt="BMW"
-          class="mb-2 h-12 w-12"
-          width="48"
-          height="48"
-        />
-        <p>BMW</p>
-      </div>
-      <div
-        class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-      >
-        <img
-          src="https://w7.pngwing.com/pngs/352/130/png-transparent-mercedes-benz-car-motor-vehicle-service-luxury-vehicle-mercedes-logo-angle-emblem-trademark.png"
-          alt="Mercedes"
-          class="mb-2 h-12 w-12"
-          width="48"
-          height="48"
-        />
-        <p>Mercedes</p>
-      </div>
-      <div
-        class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-      >
-        <img
-          src="https://w7.pngwing.com/pngs/438/86/png-transparent-audi-r8-car-volkswagen-logo-audi-text-trademark-logo.png"
-          alt="Audi"
-          class="mb-2 h-12 w-12"
-          width="48"
-          height="48"
-        />
-        <p>Audi</p>
-      </div>
-      <div
-        class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-      >
-        <img
-          src="https://w7.pngwing.com/pngs/511/878/png-transparent-silver-toyota-emblem-toyota-camry-car-toyota-fj-cruiser-logo-toyota-cdr-angle-emblem.png"
-          alt="Toyota"
-          class="mb-2 h-12 w-12"
-          width="48"
-          height="48"
-        />
-        <p>Toyota</p>
-      </div>
+      @for (vendor of vendors; track $index) {
+        <div
+          class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
+        >
+          <img
+            src="{{ vendor.imgUrl }}"
+            alt="BMW"
+            class="mb-2 h-12 w-12"
+            width="48"
+            height="48"
+          />
+          <p>{{ vendor.engName }}</p>
+        </div>
+      }
     </div>
     <div class="mb-6 rounded-lg bg-green-500 p-6 text-white">
       <h3 class="text-xl">Discount</h3>

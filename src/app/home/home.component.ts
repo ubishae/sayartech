@@ -8,6 +8,7 @@ import {
   heroClock,
   heroPaperAirplane,
 } from "@ng-icons/heroicons/outline";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-home",
@@ -19,4 +20,16 @@ import {
     provideIcons({ heroBell, heroClock, heroCalendar, heroPaperAirplane }),
   ],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  vendors: Vendor[] = [];
+
+  constructor(private http: HttpClient) {
+    http
+      .get<
+        TResponse<Vendor[]>
+      >("http://carstoreapi.somee.com/api/services/app/CarVendors/GetAllNoPaging")
+      .subscribe((res) => {
+        this.vendors = res.result.items;
+      });
+  }
+}
