@@ -40,7 +40,7 @@ export class PaymentComponent {
   constructor(private http: HttpClient) {
     http
       .get<
-        TResponse<PaymentMethod>
+        IResponse<IPaymentMethod>
       >("http://carstoreapi.somee.com/api/services/app/PaymentMethods/GetAllNoPaging")
       .subscribe((res) => {
         console.log(res);

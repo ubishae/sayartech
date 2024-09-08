@@ -1,0 +1,30 @@
+<h2 class="text-2xl font-bold">Rent Car</h2>
+<hr class="mb-5 mt-3" />
+
+@if (car) {
+  <div class="grid grid-cols-2 gap-8">
+    <div>
+      <img
+        src="{{ car.imageUrl }}"
+        alt="{{ car.engName }}"
+        class="rounded-lg"
+      />
+      <p>{{ car.engName }}</p>
+    </div>
+    <div class="flex flex-col justify-between">
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <button
+            class="flex w-full flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+          >
+            <ng-icon class="mb-3" size="24" name="heroCreditCard"></ng-icon>
+            <span>Card</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <button>Rent</button>
+      </div>
+    </div>
+  </div>
+}

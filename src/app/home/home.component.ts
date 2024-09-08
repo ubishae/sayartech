@@ -2,7 +2,6 @@ import { Component } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { NgIconComponent, provideIcons } from "@ng-icons/core";
 import {
-  heroArrowRight,
   heroBell,
   heroCalendar,
   heroClock,
@@ -21,15 +20,22 @@ import { HttpClient } from "@angular/common/http";
   ],
 })
 export class HomeComponent {
-  vendors: Vendor[] = [];
+  vendors: IVendor[] = [];
+  cars: ICar[] = [];
 
   constructor(private http: HttpClient) {
     http
       .get<
-        TResponse<Vendor[]>
+        IResponse<IResult<IVendor[]>>
       >("http://carstoreapi.somee.com/api/services/app/CarVendors/GetAllNoPaging")
       .subscribe((res) => {
         this.vendors = res.result.items;
       });
+
+    http
+      .get<
+        IResponse<IResult<ICar[]>>
+      >("http://carstoreapi.somee.com/api/services/app/CarModels/GetAllNoPaging")
+      .subscribe((res) => (this.cars = res.result.items));
   }
 }

@@ -1,76 +1,73 @@
-<div class="flex min-h-screen items-center justify-center bg-gray-100">
-  <div class="w-full max-w-5xl rounded-lg bg-white p-8 shadow-lg">
-    <div class="mb-6 flex items-center justify-between">
-      <div>
-        <h1 class="text-2xl font-bold">Salam, Haithm Ahmed!</h1>
-        <p class="text-gray-500">18th street Logan</p>
-        <hr />
-        <Button asChild class="mt-5">
-          <a href="https://sayartech.vercel.app/"> Browser in another way </a>
-        </Button>
-      </div>
-      <ng-icon name="heroBell" class="h-6 w-6 text-gray-500"></ng-icon>
-    </div>
-    <div class="mb-6 flex items-center justify-between">
-      <h2 class="text-xl font-semibold">Browse by brand</h2>
-      <a href="#" class="text-green-600"> Show more </a>
-    </div>
-    <div class="mb-6 flex items-center gap-6">
-      @for (vendor of vendors; track $index) {
-        <div
-          class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-        >
-          <img
-            src="{{ vendor.imgUrl }}"
-            alt="BMW"
-            class="mb-2 h-12 w-12"
-            width="48"
-            height="48"
-          />
-          <p>{{ vendor.engName }}</p>
-        </div>
-      }
-    </div>
-    <div class="mb-6 rounded-lg bg-green-500 p-6 text-white">
-      <h3 class="text-xl">Discount</h3>
-      <p class="text-5xl font-bold">20%</p>
-      <p>On the cart set, including installation and alignment</p>
-    </div>
-    <div class="mb-6 flex items-center justify-between">
-      <h2 class="text-xl font-semibold">Rent type</h2>
-    </div>
-    <div class="mb-6 grid grid-cols-3 gap-6">
-      <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
-        <ng-icon name="heroClock" class="mb-2" size="24"></ng-icon>
-        <p>Daily/Hourly</p>
-      </div>
-      <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
-        <ng-icon name="heroCalendar" class="mb-2" size="24"></ng-icon>
-        <p>Monthly</p>
-      </div>
-      <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
-        <ng-icon name="heroPaperAirplane" class="mb-2" size="24"></ng-icon>
-        <p>Airport</p>
-      </div>
-    </div>
-    <div class="mb-6 flex items-center justify-between">
-      <h2 class="text-xl font-semibold">Sedan</h2>
-      <a href="#" class="text-green-600"> Show more </a>
-    </div>
-    <div class="mb-6 flex items-center gap-6">
-      <div
-        class="flex h-32 w-32 flex-col items-center rounded-lg bg-gray-100 p-4"
-      >
-        <a routerLink="/payment">
-          <img
-            src="https://dam.alfuttaim.com/dx/api/dam/v1/collections/dc9b6eaa-cc71-4e6b-b9a8-2ede7939749f/items/636636eb-97a8-4c33-9018-dd9aeeee4cb3/renditions/3a456e07-36a8-45e0-a80f-0cec233d81bd?binary=true"
-            alt="Sedan Toyota Camry"
-            class="mb-2 h-24 w-24"
-            width="80"
-            height="80"
-          />
-        </a>
-      </div>
-    </div>
+<div class="mb-6 flex items-center justify-between">
+  <div>
+    <h1 class="text-2xl font-bold">Salam, Haithm Ahmed!</h1>
+    <p class="text-gray-500">18th street Logan</p>
+    <hr />
+    <Button asChild class="mt-5">
+      <a href="https://sayartech.vercel.app/"> Browser in another way </a>
+    </Button>
   </div>
+  <ng-icon name="heroBell" class="h-6 w-6 text-gray-500"></ng-icon>
+</div>
+
+<div class="mb-6 flex items-center justify-between">
+  <h2 class="text-xl font-semibold">Browse by brand</h2>
+  <a href="#" class="text-green-600"> Show more </a>
+</div>
+<div class="mb-6 flex items-center gap-6">
+  @for (vendor of vendors; track $index) {
+    <div
+      class="flex cursor-pointer flex-col items-center rounded border px-10 py-5 transition-all hover:shadow"
+    >
+      <img
+        src="{{ vendor.imgUrl }}"
+        alt="BMW"
+        class="mb-2 h-14 w-14 bg-white"
+      />
+      <p>{{ vendor.engName }}</p>
+    </div>
+  }
+</div>
+<div class="mb-6 rounded-lg bg-green-500 p-6 text-white">
+  <h3 class="text-xl">Discount</h3>
+  <p class="text-5xl font-bold">20%</p>
+  <p>On the cart set, including installation and alignment</p>
+</div>
+<div class="mb-6 flex items-center justify-between">
+  <h2 class="text-xl font-semibold">Rent type</h2>
+</div>
+<div class="mb-6 grid grid-cols-3 gap-6">
+  <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
+    <ng-icon name="heroClock" class="mb-2" size="24"></ng-icon>
+    <p>Daily/Hourly</p>
+  </div>
+  <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
+    <ng-icon name="heroCalendar" class="mb-2" size="24"></ng-icon>
+    <p>Monthly</p>
+  </div>
+  <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4">
+    <ng-icon name="heroPaperAirplane" class="mb-2" size="24"></ng-icon>
+    <p>Airport</p>
+  </div>
+</div>
+<div class="mb-6 flex items-center justify-between">
+  <h2 class="text-xl font-semibold">Browse by Cars</h2>
+  <a href="#" class="text-green-600"> Show more </a>
+</div>
+<div class="mb-6 flex items-center gap-6">
+  @for (car of cars; track $index) {
+    <a
+      [routerLink]="['/duration', car.id]"
+      class="rounded border p-5 text-center"
+    >
+      <img
+        src="{{ car.imageUrl }}"
+        alt="Sedan Toyota Camry"
+        class="mb-2 h-24 w-24"
+        width="80"
+        height="80"
+      />
+      <div>{{ car.carVendor.engName }} - {{ car.engName }}</div>
+    </a>
+  }
 </div>
