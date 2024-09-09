@@ -21,7 +21,7 @@ export class DurationComponent {
     http
       .get<
         IResponse<ICar>
-      >(`http://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.carId}`)
+      >(`https://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.carId}`)
       .subscribe((res) => {
         this.car = res.result;
       });
