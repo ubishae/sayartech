@@ -6,6 +6,7 @@ import { RentTypeComponent } from "./rent-type/rent-type.component";
 import { LoginComponent } from "./login/login.component";
 import { CheckoutSuccessComponent } from "./checkout-success/checkout-success.component";
 import { DurationComponent } from "./duration/duration.component";
+import { RegisterComponent } from "./register/register.component";
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: "login",
     component: LoginComponent,
+  },
+  {
+    path: "register",
+    component: RegisterComponent,
   },
   {
     path: "rent/:carId",

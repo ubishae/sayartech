@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div>
+  <form [formGroup]="login" (ngSubmit)="onSubmit()">
+    <label
+      for="userNameOrEmailAddress"
+      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >Username or Email</label
+    >
+    <input
+      id=""
+      type="userNameOrEmailAddress"
+      formControlName="userNameOrEmailAddress"
+      class="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+    />
+    <div>
+      <label
+        for="password"
+        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >Password</label
+      >
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        class="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+      />
+    </div>
+    <div>
+      <label
+        for="password"
+        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >Remember me</label
+      >
+      <input
+        type="checkbox"
+        formControlName="rememberClient"
+        class="peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+      />
+    </div>
+
+    <button>Login</button>
+  </form>
+</div>

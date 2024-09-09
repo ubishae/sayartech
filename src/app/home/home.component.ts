@@ -27,7 +27,7 @@ export class HomeComponent {
     http
       .get<
         IResponse<IResult<IVendor[]>>
-      >("https://carstoreapi.somee.com/api/services/app/CarVendors/GetAllNoPaging")
+      >("http://carstoreapi.somee.com/api/services/app/CarVendors/GetAllNoPaging")
       .subscribe((res) => {
         this.vendors = res.result.items;
       });
@@ -35,7 +35,7 @@ export class HomeComponent {
     http
       .get<
         IResponse<IResult<ICar[]>>
-      >("https://carstoreapi.somee.com/api/services/app/CarModels/GetAllNoPaging")
+      >("http://carstoreapi.somee.com/api/services/app/CarModels/GetAllNoPaging")
       .subscribe((res) => (this.cars = res.result.items));
   }
 }

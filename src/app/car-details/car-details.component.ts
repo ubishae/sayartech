@@ -20,7 +20,7 @@ export class CarDetailsComponent {
     http
       .get<
         IResponse<ICar>
-      >(`https://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.id}`)
+      >(`http://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.id}`)
       .subscribe((res) => {
         console.log(res);
       });
