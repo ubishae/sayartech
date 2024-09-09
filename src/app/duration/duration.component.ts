@@ -11,7 +11,7 @@ import { ActivatedRoute, RouterLink } from "@angular/router";
 })
 export class DurationComponent {
   carId: string | null;
-  car: ICar | undefined;
+  car: ICarModel | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +20,7 @@ export class DurationComponent {
     this.carId = route.snapshot.paramMap.get("carId");
     http
       .get<
-        IResponse<ICar>
+        IResponse<ICarModel>
       >(`http://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.carId}`)
       .subscribe((res) => {
         this.car = res.result;

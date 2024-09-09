@@ -21,7 +21,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class HomeComponent {
   vendors: IVendor[] = [];
-  cars: ICar[] = [];
+  cars: ICarModel[] = [];
 
   constructor(private http: HttpClient) {
     http
@@ -34,7 +34,7 @@ export class HomeComponent {
 
     http
       .get<
-        IResponse<IResult<ICar[]>>
+        IResponse<IResult<ICarModel[]>>
       >("http://carstoreapi.somee.com/api/services/app/CarModels/GetAllNoPaging")
       .subscribe((res) => (this.cars = res.result.items));
   }

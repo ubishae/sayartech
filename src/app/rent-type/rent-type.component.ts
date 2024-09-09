@@ -14,8 +14,7 @@ import { heroCreditCard } from "@ng-icons/heroicons/outline";
 })
 export class RentTypeComponent {
   carId: string | null;
-  car: ICar | undefined;
-  ServiceTypes: IServiceType[] = [];
+  car: ICarModel | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +23,7 @@ export class RentTypeComponent {
     this.carId = route.snapshot.paramMap.get("carId");
     http
       .get<
-        IResponse<ICar>
+        IResponse<ICarModel>
       >(`http://carstoreapi.somee.com/api/services/app/CarModels/Get?Id=${this.carId}`)
       .subscribe((res) => {
         this.car = res.result;

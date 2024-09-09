@@ -7,22 +7,39 @@ interface IResponse<T> {
   __abp: boolean;
 }
 
+interface IRegister {
+  canLogin: boolean;
+}
+
+interface ILogin {
+  accessToken: string;
+  encryptedAccessToken: string;
+  expireInSeconds: number;
+  userId: number;
+}
+
+interface IApplication {
+  version: string;
+  releaseDate: string;
+  features: Features;
+}
+
+interface ICurrentInfo {
+  application: Application;
+  user: IUser;
+}
+
+interface IUser {
+  name: string;
+  surname: string;
+  userName: string;
+  emailAddress: string;
+  id: number;
+}
+
 interface IResult<T> {
   totalCount: number;
   items: T;
-}
-
-interface IPaymentMethod {
-  nameEN: string;
-  nameAR: string;
-  id: number;
-}
-
-interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
 }
 
 interface IVendor {
@@ -40,7 +57,7 @@ interface IVendor {
   id: number;
 }
 
-interface ICar {
+interface ICarModel {
   name: string;
   engName: string;
   imageUrl: string;
@@ -57,19 +74,8 @@ interface ICar {
   id: number;
 }
 
-interface IRegister {
-  canLogin: boolean;
-}
-
-interface ILogin {
-  accessToken: string;
-  encryptedAccessToken: string;
-  expireInSeconds: number;
-  userId: number;
-}
-
-interface IServiceType {
-  id: number;
+interface IPaymentMethod {
   nameEN: string;
   nameAR: string;
+  id: number;
 }
