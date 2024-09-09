@@ -1,13 +1,14 @@
 <div>
-  <form [formGroup]="login" (ngSubmit)="onSubmit()">
+  <h1 class="mb-8 text-center text-2xl uppercase">Login</h1>
+  <form [formGroup]="login" (ngSubmit)="onSubmit()" class="grid gap-5">
     <label
       for="userNameOrEmailAddress"
       class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >Username or Email</label
     >
     <input
-      id=""
-      type="userNameOrEmailAddress"
+      id="userNameOrEmailAddress"
+      type="text"
       formControlName="userNameOrEmailAddress"
       class="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
     />
@@ -24,7 +25,7 @@
         class="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
       />
     </div>
-    <div>
+    <div class="flex items-center gap-3">
       <label
         for="password"
         class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -37,6 +38,10 @@
       />
     </div>
 
-    <button>Login</button>
+    <div class="text-center">
+      <button class="mt-5 rounded-lg bg-green-400 px-5 py-2 text-white">
+        Login
+      </button>
+    </div>
   </form>
 </div>
