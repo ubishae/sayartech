@@ -41,7 +41,7 @@ export class PaymentComponent {
     http
       .get<
         IResponse<IPaymentMethod>
-      >("http://carstoreapi.somee.com/api/services/app/PaymentMethods/GetAllNoPaging")
+      >("https://carstores.sayaratech.net/api/services/app/PaymentMethods/GetAllNoPaging")
       .subscribe((res) => {
         console.log(res);
       });

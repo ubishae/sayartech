@@ -22,13 +22,13 @@ export class LoginComponent {
     this.http
       .post<
         IResponse<ILogin>
-      >("http://carstoreapi.somee.com/api/TokenAuth/Authenticate", this.login.value)
+      >("https://carstores.sayaratech.net/api/TokenAuth/Authenticate", this.login.value)
       .subscribe((res) => {
         console.log(res.result);
         localStorage.setItem("accessToken", res.result.accessToken);
         // this.http
         //   .get<IResponse<ICurrentInfo>>(
-        //     "http://carstoreapi.somee.com/api/services/app/Session/GetCurrentLoginInformations",
+        //     "https://carstores.sayaratech.net/api/services/app/Session/GetCurrentLoginInformations",
         //     {
         //       headers: {
         //         Authorization: `Bearer ${res.result.accessToken}`,

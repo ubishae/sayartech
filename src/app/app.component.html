@@ -1,7 +1,7 @@
 <div class="flex min-h-screen items-center justify-center bg-gray-200">
   <div class="w-full max-w-5xl rounded-lg bg-white p-8 shadow-lg">
     <div class="mb-6 flex items-center justify-between">
-      @if (currentUser.id > 0) {
+      @if (currentUser && currentUser.id > 0) {
         <div>
           <h1 class="text-2xl font-bold">
             Salam, {{ currentUser.name }} {{ currentUser.surname }}
