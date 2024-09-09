@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -16,7 +17,10 @@ export class LoginComponent {
     rememberClient: new FormControl(false),
   });
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) {}
 
   onSubmit() {
     this.http
@@ -36,6 +40,7 @@ export class LoginComponent {
         //     },
         //   )
         //   .subscribe((res) => {});
+        this.router.navigate(["/login"]);
       });
 
     this.login.reset();
