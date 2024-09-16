@@ -26,7 +26,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {
     this.http
       .get<IResponse<ICurrentInfo>>(
-        "https://carstores.sayaratech.net/api/services/app/Session/GetCurrentLoginInformations",
+        "https://localhost:44311/api/services/app/Session/GetCurrentLoginInformations",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,

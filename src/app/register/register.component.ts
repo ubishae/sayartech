@@ -30,7 +30,7 @@ export class RegisterComponent {
     this.http
       .post<
         IResponse<IRegister>
-      >("https://carstores.sayaratech.net/api/services/app/Account/Register", this.register.value)
+      >("https://localhost:44311/api/services/app/Account/Register", this.register.value)
       .subscribe((res) => {
         this.router.navigate(["/login"]);
       });

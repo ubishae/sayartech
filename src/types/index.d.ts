@@ -79,3 +79,35 @@ interface IPaymentMethod {
   nameAR: string;
   id: number;
 }
+
+interface ICar {
+  model_Year: number;
+  board_No: string;
+  car_Lic_No: string;
+  last_KMs_Usages: number;
+  more_Desc: string;
+  is_deleted: boolean;
+  is_active: boolean;
+  is_new_car: boolean;
+  created_by: number;
+  created_date: string;
+  updated_by: number;
+  updated_date: string;
+  deleted_by: number;
+  deleted_date: string;
+  engineType: string;
+  car_Lic_Eng: string;
+  userId: number;
+  user: any;
+  carVendorId: number;
+  carVendor: any;
+  carModelId: number;
+  carModels: any;
+  carColorId: number;
+  carColors: any;
+  carModelsEngineId: number;
+  carModelsEngines: any;
+  carFuleTypeId: number;
+  carFuleTypes: any;
+  id: number;
+}

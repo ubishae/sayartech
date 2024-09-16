@@ -24,7 +24,7 @@ export class RentComponent {
     http
       .get<
         IResponse<ICarModel>
-      >(`https://carstores.sayaratech.net/api/services/app/CarModels/Get?Id=${this.carId}`)
+      >(`https://localhost:44311/api/services/app/CarModels/Get?Id=${this.carId}`)
       .subscribe((res) => {
         this.car = res.result;
       });

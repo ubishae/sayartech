@@ -20,7 +20,7 @@ export class CarDetailsComponent {
     http
       .get<
         IResponse<ICar>
-      >(`https://carstores.sayaratech.net/api/services/app/CarModels/Get?Id=${this.id}`)
+      >(`https://localhost:44311/api/services/app/CarModels/Get?Id=${this.id}`)
       .subscribe((res) => {
         console.log(res);
       });

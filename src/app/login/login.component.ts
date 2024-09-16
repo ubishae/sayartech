@@ -26,13 +26,13 @@ export class LoginComponent {
     this.http
       .post<
         IResponse<ILogin>
-      >("https://carstores.sayaratech.net/api/TokenAuth/Authenticate", this.login.value)
+      >("https://localhost:44311/api/TokenAuth/Authenticate", this.login.value)
       .subscribe((res) => {
         console.log(res.result);
         localStorage.setItem("accessToken", res.result.accessToken);
         // this.http
         //   .get<IResponse<ICurrentInfo>>(
-        //     "https://carstores.sayaratech.net/api/services/app/Session/GetCurrentLoginInformations",
+        //     "https://localhost:44311/api/services/app/Session/GetCurrentLoginInformations",
         //     {
         //       headers: {
         //         Authorization: `Bearer ${res.result.accessToken}`,
